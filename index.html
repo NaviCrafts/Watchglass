@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Watchglass</title>
+<meta name="description" content="Aquarium water test log and tank record">
+<meta name="theme-color" content="#0c171b">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+  * { -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; background: #0c171b; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #e4efee;
+    -webkit-font-smoothing: antialiased;
+  }
+  input, textarea, button { font-family: inherit; }
+  input[type="date"] { color-scheme: dark; }
+  @keyframes wg-sweep {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(31px); }
+    100% { transform: translateX(0); }
+  }
+  .wg-tick { animation: wg-sweep 1.9s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .wg-tick { animation: none; transform: translateX(15px); }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="app.js"></script>
+</body>
+</html>
